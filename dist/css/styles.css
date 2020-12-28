@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/***********
+
+Notes
+“Verified Graduate” has the same color as the person's name with 50% opacity
+Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+************/
+/* Mixins */
+/* Primary colors */
+/* Neutral colors */
+/* Break points */
+/* Typography */
+/* End mixins*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #ecf2f8;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Layout */
+.container {
+  width: 325px;
+  padding-top: 12px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    display: grid;
+    grid-template-columns: 2.49fr 0.76fr;
+    grid-column-gap: 30px;
+    width: 1110px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .left-column {
+    display: grid;
+    grid-row-gap: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .left-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 25px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .top-row {
+    display: grid;
+    grid-row-gap: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .top-row {
+    display: grid;
+    grid-template-columns: 1.81fr 0.87fr;
+    grid-column-gap: 30px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .bottom-row {
+    display: grid;
+    grid-row-gap: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 0.95fr 2fr;
+    grid-column-gap: 30px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .right-column {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.card {
+  border-radius: 8px;
+  -webkit-box-shadow: 40px 40px 75px -30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 40px 40px 75px -30px rgba(0, 0, 0, 0.1);
+  box-shadow: 40px 40px 75px -30px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.card .testimonial {
+  margin-top: 16px;
+  line-height: 18px;
+}
+
+.card .profile {
+  display: grid;
+  grid-template-columns: 1fr 16fr;
+}
+
+.card .profile img {
+  border-radius: 50%;
+  max-width: 32px;
+}
+
+.card .profile .user-info {
+  margin-left: 16px;
+  font-size: 11.5px;
+  color: #a8a8a8;
+}
+
+.card .profile .user-info h2 {
+  font-size: 12.5px;
+}
+
+.violet-card {
+  background-color: #7541c8;
+  background-image: url("../images/bg-pattern-quotation.svg");
+  color: #b5b5b5;
+  padding: 22px 32px 32px 32px;
+}
+
+@media (max-width: 1440px) {
+  .violet-card {
+    background-repeat: no-repeat;
+    background-position: right 20px top 1px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .violet-card {
+    background-repeat: no-repeat;
+    background-position: right 80px top 1px;
+  }
+}
+
+.violet-card h1 {
+  color: white;
+}
+
+.violet-card p {
+  color: #bda4e5;
+}
+
+.violet-card img {
+  border: 2px solid #ae90df;
+}
+
+.violet-card .profile .user-info h2 {
+  color: #e8dff6;
+}
+
+.violet-card .profile .user-info p {
+  color: #cbb8ea;
+}
+
+.white-card {
+  background-color: white;
+  border-radius: 10px;
+  color: #8f8f8f;
+  padding: 22px 28px 40px 32px;
+}
+
+.white-card h1 {
+  color: #48556a;
+}
+
+.white-card h2 {
+  color: #48556a;
+}
+
+.white-card .testimonial {
+  margin-top: 24px;
+}
+
+.white-card1 {
+  padding: 22px 32px 21px 32px;
+}
+
+.light-gray-card {
+  background-color: #48556a;
+  color: white;
+  padding: 22px 32px 32px 32px;
+}
+
+.light-gray-card .testimonial {
+  color: #c1ccd7;
+}
+
+.light-gray-card .profile .user-info h2 {
+  color: #f0f2f5;
+}
+
+.light-gray-card .profile .user-info p {
+  color: #a2b3c3;
+}
+
+.light-gray-card .profile img {
+  max-width: 28px;
+}
+
+.dark-gray-card {
+  background-color: #19212e;
+  color: #e8e8e8;
+  padding: 22px 32px 12px 32px;
+}
+
+.dark-gray-card .profile .user-info h2 {
+  color: #f0f2f5;
+}
+
+.dark-gray-card .profile .user-info p {
+  color: #a2b3c3;
+}
+
+.dark-gray-card .profile img {
+  max-width: 32px;
+  border: 2px solid #ae90df;
+}
+
+.dark-gray-card .testimonial {
+  margin-top: 24px;
+  color: #b5b5b5;
+}
